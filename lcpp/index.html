@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>L* C++</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <style>
+  body { position: relative; }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+
+  <div class="container">
+
+    <section id="top" class="docs-heading">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="big-title text-center">
+            <h1>L* C++</h1>
+            <p class="lead">C++ Playground on iPhones and iPads</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+    </section>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <nav id="navbar" class="navbar-light bg-light flex-column sticky-top">
+          <!--<a class="navbar-brand" href="#">L* C++</a>-->
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#section_features">Features</a>
+            <a class="nav-link" href="#section_usage_tips">Usage Tips</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ml-3 my-1" href="#section_project_documentation">Project Documentation</a>
+              <a class="nav-link ml-3 my-1" href="#section_multiple_source_files">Multiple Source Files</a>
+              <a class="nav-link ml-3 my-1" href="#section_standard_output">Standard Output</a>
+              <a class="nav-link ml-3 my-1" href="#section_standard_c_library">Standard C Library</a>
+              <a class="nav-link ml-3 my-1" href="#section_cpp_standard_template_library">C++ Standard Template Library (STL)</a>
+              <a class="nav-link ml-3 my-1" href="#section_other_limitations">Other Limitations</a>
+            </nav>
+            <a class="nav-link" href="#section_examples">Examples</a>
+            <a class="nav-link" href="#section_privacy_policy">Privacy Policy</a>
+          </nav>
+        </nav >
+      </div>
+
+      <div class="col-md-9">
+        <section class="welcome">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+               <h2 class="dark-text">Introduction<hr></h2>
+              <div class="row">
+
+                <div class="col-md-12 full">
+                  <div>
+                    <p>Thank you so much for purchasing this application. We hope that you will find the tool useful and will enjoy using it.</p>
+
+                    <p>L* C++ is an C++ integrated development environment iOS app. In other words, it allows you to write C++ programs, gets them executed (technically, <em>interpreted</em>) and see the output.</p>
+
+                    <p>Our main audiences are <em>students learning to program</em> and <em>developers writing back-end utility libraries</em> such as those to perform computation in algebra, statistics and data compression, to train artificial intelligent model, etc. as opposed to GUI-based applications.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section_features">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Features <hr></h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>Compared to similar tools in the market, L* C++ is</p>
+              <ol>
+                <li><strong>Designed with the latest Swift + SwiftUI technology</strong>: Integrate well with the latest iPhones Look-and-Feel and at the same time designed with minimalism.</li>
+                <li><strong>Works offline</strong>: No Internet connection is required to run code. So you can play with C++ even on your flight or your train commute.</li>
+                <li><strong>Provide project management</strong>: You can create a new project (full version only), create a new file or importing an existing file to the project. We also support exporting a project as zip file. We also intend to support Git repository and build configuration in the future.</li>
+                <li><strong>Support project documentation</strong>: Don't just code, document your code too! Unlike many IDEs on the market (including those for Mac/PC), we include an easy access to your project documentation.</li>
+                <li><strong>Syntax highlighting code editor with code completion support</strong>: We are using existing powerful open source code editor, namely Monaco Editor, that many developers love and are already familiar with.</li>
+                <li><strong>No command lines</strong> to produce auxiliary files to execute a C++ program: Just hit Run and watch the magic.</li>
+              </ol>
+          </div>
+
+        </section>
+
+        <section id="section_usage_tips">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Usage Tips <hr></h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_project_documentation">Project Documentation</h4>
+              <p>The project's <em>Overview</em> tab loads the project documentation (like this page) in <code>doc/index.html</code>. You can put all the required resources (images, CSS) there.</p>
+
+              <p>On the related topic, it is best to organize your projects like many open source community, namely into directories such as
+              <ul>
+                <li><code>src</code> for private headers and implementations,</li>
+                <li><code>include</code> for public headers (your API),</li>
+                <li><code>data</code> for program data, models, ...</li>
+              <ul></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_multiple_source_files">Multiple Source Files</h4>
+              <p>In traditional C++ development environment, you can split a program into multiple source files, say <code>a.cpp</code> and <code>b.cpp</code>. Then you compile them into separate object files <code>a.o</code> and <code>b.o</code> and then link them into an architecture-dependent (ARM, x86, ...) executable, say <code>myprogram</code> that could be executed in the Terminal by typing <code>./myprogram</code>.</p>
+              <p>At this first release, L* C++ could not perform linkage and iOS also disallows execution of native programs. So we actually <strong>interpret</strong> C++ program instead of performing the traditional compilation-linkage. In other words, we are executing the C++ code line-by-line whereas the executable is a binary file containing instructions that could be executed by the CPU directly. That means <strong>for now</strong>, we cannot support multiple source files and so you need to <code>#include</code> all source into a single program. For instance, if you want to run the program <code>a.cpp</code> that has some function implemented in <code>b.cpp</code>, you must add <code>#include "b.cpp"</code> in the file <code>a.cpp</code>.</p>
+              <p>We are sorting out the right user interface for all the required customizations akin to Xcode build targets and schemes.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_standard_output">Standard Output</h4>
+              <p>The standard output is the most fundamental form of output for command lines program: to print out textual messages to communicate with the user. Our app supported this via a limited implementation of C++ <code>std::cout</code> (it does not work with <code>std::string</code> yet but does work for many other common types). Standard C API such as <code>printf</code> will not work and since it is a good coding practice to avoid <code>printf</code> for security reason, we do not intend to support it in the future.</p>
+              <p>See our "Hello World" program <strong>hello.cpp</strong> for an example.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_standard_c_library">Standard C Library</h4>
+              <p>You can use a majority of the standard C APIs in your app such as those involving math, string manipulation, memory allocation, memory copy and initialization, random number generation, etc. The one you cannot use are
+              <ul>
+                <li>those involving function pointers as arguments such as <code>qsort</code> and <code>bsearch</code> declared in the C header <code>stdlib.h</code> (but note that there are better alternatives for these particular functions in C++ standard template library <strong>algorithm</strong>) as well as</li>
+                <li>those dealing with <code>FILE</code> due to <em>iOS sandbox limitations and security restrictions</em></li>
+                <li>and please also avoid <code>setjmp</code>.</li>
+              </ul>
+              <p>In the future, we will attempt to port <code>fstream</code> in C++ standard library for file I/O.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_cpp_standard_template_library">C++ Standard Template Library (STL)</h4>
+              <p>For C++ standard template library, we supply <strong>libc++</strong> from the LLVM project but our knowledge of its implementation is limited.
+              <ul>
+                <li>C++ containers (<code>vector</code>, <code>map</code>, <code>set</code>, <code>linked_list</code> and the like) should work properly; as are standard container <code>algorithm</code>.</li>
+                <li>Some <code>string</code> methods do not (namely, less than comparison and related operators) while all other <code>string</code> methods do.</p>
+                <li>Input/output <code>stream</code> does not work due to dependency on some <code>locale</code> code. But we provide a temporary implementation of <code>std::cout</code> for output.</li>
+                <li>Threading-related stuffs (<code>atomic</code>, <code>condition_variable</code>, <code>future</code>, <code>mutex</code>, <code>thread</code>) are definitely not available <strong>until we port them</strong>. Nevertheless, they are not relevant since our goals are single threaded programs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="section_other_limitations">Other Limitations</h4>
+              <p>There are several other limitations in the current release that you should be aware of</p>
+              <ol>
+                <li>You <strong>cannot terminate a running program</strong>. Until we figure out a monitoring system, please let the program run until completion so the interpreter could perform appropriate clean up.</li>
+                <li>The interpreter <strong>cannot catch runtime error</strong> such as null pointer access. You need to make appropriate check in your code. The interpreter simply invokes iOS system service on your behalf.</li>
+                <li>We currently <strong>lack debugging capability</strong> such as breakpoints and stepping through the program but we do intend to have some diagnostic and tracing in the future.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section id="section_examples">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Examples <hr></h2>
+            </div>
+          </div>
+
+          <p>This Getting Started project includes several example programs to illustrate the capability of our C++ interpreter:</p>
+          <ul>
+            <li><code>hello.cpp</code>: Classical "Hello World" program.</li>
+            <li><code>fibonacci.cpp</code>: Elementary program to produce Fibonacci numbers.</li>
+            <li><code>polymorphism.cpp</code>: Polymorphism in C++ Object-Oriented Programming.</li>
+            <li><code>functional.cpp</code>: Templates and Functional Programming in C++ language.</li>
+            <li><code>math.cpp</code>: Examples of standard mathematical functions.</li>
+            <li><code>prng.cpp</code>: Random number generation.</li>
+            <li><code>string.cpp</code>: Illustrations of null terminated C strings and <code>std::string</code>.</li>
+            <li><code>sort.cpp</code>: Using C++ STL to sort a container.</li>
+            <li><code>permutations.cpp</code>: Using C++ STL to enumerate permutations.</li>
+          </ul>
+
+        </section>
+
+        <section id="section_privacy_policy">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Privacy Policy <hr></h2>
+            </div>
+          </div>
+
+          <p>This app does not collect any user information. All your files belong to you.</p>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  <script>
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar'
+  });
+  </script>
+
+</body>
+</html>
