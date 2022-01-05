@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>MobiTeX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
+  <style>
+  body { position: relative; }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+
+  <div class="container">
+
+    <section id="top" class="docs-heading">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="big-title text-center">
+            <h1>MobiTeX</h1>
+            <p class="lead">LaTeX Document Processor on iPhones</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+    </section>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <nav id="navbar" class="navbar-light bg-light flex-column sticky-top">
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#section_features">Features</a>
+            <a class="nav-link" href="#section_usage_notes">Usage Notes</a>
+            <a class="nav-link" href="#section_privacy_policy">Privacy Policy</a>
+            <a class="nav-link" href="#section_acknowledgement">Acknowledgement</a>
+          </nav>
+        </nav >
+      </div>
+
+      <div class="col-md-9">
+        <section class="welcome">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+               <h2 class="dark-text">Introduction<hr></h2>
+              <div class="row">
+
+                <div class="col-md-12 full">
+                  <div>
+                    <p>MobiTeX brings you an offline <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> editor and compiler on iPhones, allowing you to typeset beautiful scientific documents on the go.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section_features">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Features <hr></h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <ol>
+                <li><strong>Integrated environment</strong> to edit, compile and view the typeset output.</li>
+                <li><strong>Works locally</strong> without an Internet connection <em>but requires Internet to download extra resources</em>.</li>
+                <li><strong>Automatic acquisition of resources</strong> such as additional fonts so you do not have to download a very large package (800 MB, for example) like other apps.</li>
+                <li><strong>Integrate with Files app</strong> so you can browse and open any <code>.tex</code> files, including those managed by other cloud providers. Better yet, revision control your source code with our other free app <a href="https://apps.apple.com/us/app/omigit/id1597699768"><img src="../git/OG.png" style="height:1.5em;"/></a>!</li>
+                <li><strong>DVI viewer implemented with Metal</strong>, Apple's latest graphics library, for blazingly fast performance.</li>
+              </ol>
+          </div>
+
+        </section>
+
+        <section id="section_usage_notes">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Usage notes<hr></h2>
+            </div>
+          </div>
+
+          <p>There are some limitations to the iOS document-based app, at least, in our knowledge which lead to some implications on the app usage.
+          <ol>
+              <li><strong>You must press <img src="save.svg" style="height:1.5em;" /> to save the changes</strong>: Apple expects document-based app to auto-save documents but that might be undesirable in a code editor because there are times when you do not like the changes and want to restore the document to what it was originally. On the top of that, due to a lack of native code editor for iOS, we used a web-based editor (HTML + JavaScript) so efficient synchronization between the editor and the underlying file cannot be done as you type.</li>
+              <li><strong>Saving file takes time</strong>: Per iOS, when you press <img src="save.svg" style="height:1.5em;" />, file is not written straight away but only when you press the <img src="back.svg" style="height:1.5em;" /> button to close the document. (We lack the knowledge to trigger file writing.) Because files could be backed by cloud storage, there could be a delay between closing the document and the file's content is actually changed in storage. So, you might see the old content and think that the file is not saved if you close and quickly reopen a document!</li>
+              <li><strong>Your source file must be self-contained</strong>: While LaTeX allows source file to use <code>\input</code> to load other files (for example, when writing a book, you could write each chapter in a different file and then load them into the main file), we cannot support that. That is because for security reason, iOS provides no interaction with the rest of the file system: <em>MobiTeX sees only the file you open</em>. Also, since the file could come from cloud providers, opening a different file requires some kind of interaction with other apps and we do not see how it could be accomplished at the moment.</li>
+              <li><strong>This app cannot export PDF</strong>: Our goal is to provide a tool to write and preview your document, especially formulas. You can use it in conjunction with other online services such as <a href="https://www.overleaf.com/">Overleaf</a> (or better, build your own Git Continuous Integration) to produce PDF for your document.</li>
+              <li>You might need to recompile the document when there are missing fonts in order for them to appear.</li>
+              <li>There are definitely LaTeX features that are not available since those requires a more modern engine/compiler than what we use.</li>
+          </ol>
+          </p>
+
+        </section>
+
+        <section id="section_privacy_policy">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Privacy Policy <hr></h2>
+            </div>
+          </div>
+
+          <p>This app does not collect any user information. All your files belong to you.</p>
+
+        </section>
+
+        <section id="section_acknowledgement">
+
+          <div class="row">
+            <div class="col-md-12 left-align">
+              <h2 class="dark-text">Acknowledgement<hr></h2>
+            </div>
+          </div>
+
+          <p>The app's whale logo comes from <a href="https://www.vecteezy.com/vector-art/2572819-whale-sea-life-animal-isolated-icon">gstudioimagen</a> at <a href="https://www.vecteezy.com/">vecteezy.com</a>.</p>
+
+          <p>We use <a href="https://codemirror.net/">CodeMirror</a> for the LaTeX editor but will switch to <a href="https://microsoft.github.io/monaco-editor/">Monaco</a> once we figure out how to make LaTeX syntax highlighting work on it.</p>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <!--<script src="../bootstrap/js/bootstrap.js"></script>-->
+  <script>
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar'
+  });
+  </script>
+
+</body>
+</html>

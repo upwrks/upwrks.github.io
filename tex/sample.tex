@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Some well-known formulas}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Taylor series}
+
+\begin{align*}
+\exp(x) &= \sum_{n=0}^{\infty} \frac{x^n}{n!}\\
+\ln(1 + x) &= \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n}\\
+\sin(x) &= \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!} x^{2n+1}\\
+\cos(x) &= \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!} x^{2n}\\
+\tan(x) &= \sum_{n=0}^{\infty} \frac{B_{2n} (-4)^n (1 - 4^n)}{(2n)!} x^{2n-1}
+\end{align*}
+
+Here, $B_n$ are the Bernoulli numbers.
+
+Exercise: Derive the recursive formula for $B_n$ from
+$$\tan(x) = \frac{\sin(x)}{\cos(x)}.$$
+
+
+\section{Integrals}
+
+\begin{align*}
+\int_{-\infty}^{\infty} e^{-x^2/2} dx &= \sqrt{2\pi}
+\end{align*}
+
+\end{document}
