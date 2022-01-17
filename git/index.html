@@ -6,7 +6,6 @@
   <title>OmiGit</title>
   <link rel="icon" type="image/png" href="OG.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!--<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />-->
   <style>
   body { position: relative; }
   </style>
@@ -93,7 +92,12 @@
                         <li><code>git reset</code>: Revert the branch to a particular commit</li>
                     </ul>
                 </li>
-                <li><strong>Designed with the latest Swift + SwiftUI technology</strong>: Integrate well with the latest iPhones Look-and-Feel and at the same time designed with minimalism. Support natural standard gestures such as swipe to push/fetch.</li>
+                <li><strong>Designed with the latest Swift + SwiftUI technology</strong> to integrate well with the latest iPhones Look-and-Feel.
+                    <ol type="a">
+                        <li>Support the ubiquitous pull-to-refresh gesture: to rescan the status and to reload the commit history.</li>
+                        <li>Support the natural swipe gesture on the remote to push/fetch to/from a remote repository.</li>
+                    </ol>
+                </li>
                 <li><strong>Integrate with Files app</strong>: The repositories managed by the app are accessible from the iOS Files app so you could use any editor to edit the files.</li>
                 <li><strong>Provide a simple credential manager</strong> based on the remote URL prefix so you do not type the password over and over again.</li>
               </ol>
@@ -137,7 +141,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <!--<script src="../bootstrap/js/bootstrap.js"></script>-->
   <script>
   var scrollSpy = new bootstrap.ScrollSpy(document.body, {
   target: '#navbar'
